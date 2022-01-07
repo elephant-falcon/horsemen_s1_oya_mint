@@ -167,3 +167,16 @@ div {
   user-select: none;
   -o-user-select: none;
 }
+
+#root {
+    height: 100%;
+    /* background: red; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+#root + div {
+  height: 100% !important;
+}

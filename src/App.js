@@ -1,14 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
-import { Div, Button, Icon, Row, Col, Container, Tag, ThemeProvider, Anchor, Text, Image, Input } from "atomize";
+import { Div, Button, Icon, Row, Col, Container, Tag, Anchor, Text, Image } from "atomize";
 
 const HRSM_Center = { display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' };
 const HRSM_IMG_Center = { display: 'flex', justifyContent: 'center', alignItems: 'center' };
-
-const truncate = (input, len) =>
-  input.length > len ? `${input.substring(0, len)}...` : input;
 
 const mintLimit = 3;
 
@@ -115,7 +112,7 @@ function App() {
   }, [blockchain.account]);
 
   return (
-    <Container>
+    <Container h="100%">
 
       <Div style={HRSM_Center}>
 
@@ -310,7 +307,9 @@ function App() {
                 </Col>
                 <Col size={{ xs: 3, lg: 3 }} style={HRSM_IMG_Center}>
 
-                  <Image alt={"logo"} src={"/config/images/opensea-logo.png"} />
+                  <Anchor target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
+                    <Image alt={"logo"} src={"/config/images/opensea-logo.png"} />
+                  </Anchor>
 
                 </Col>
               </Row>
@@ -343,7 +342,7 @@ function App() {
               <Row>
                 <Col size={{ xs: 1, lg: 3 }}></Col>
                 <Col size={{ xs: 10, lg: 6 }}>
-                  <Image alt={"example"} src={"/config/images/proofs/oya-variants-3_Rare.jpg"} />
+                  <Image alt={"example"} src={"/config/images/proofs/preview.gif"} />
                 </Col>
                 <Col size={{ xs: 1, lg: 3 }}></Col>
               </Row>
