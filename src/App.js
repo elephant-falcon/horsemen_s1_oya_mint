@@ -80,8 +80,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > mintLimit) {
-      newMintAmount = mintLimit;
+    if (newMintAmount > 7) {
+      newMintAmount = 7;
     }
     setMintAmount(newMintAmount);
   };
