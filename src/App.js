@@ -112,7 +112,7 @@ function App() {
   }, [blockchain.account]);
 
   return (
-    <Container h={{ xs: 'auto', md:  '100%' }}>
+    <Container h={{ xs: 'auto', md: '100%' }}>
 
       <Div style={HRSM_Center}>
 
