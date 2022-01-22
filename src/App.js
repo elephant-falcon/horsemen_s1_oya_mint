@@ -93,7 +93,7 @@ function App() {
   };
 
   const getConfig = async () => {
-    const configResponse = await fetch("/config/config.json", {
+    const configResponse = await fetch("config/config.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -126,7 +126,7 @@ function App() {
                 <Col size={{ xs: 4, lg: 4 }}></Col>
                 <Col size={{ xs: 4, lg: 4 }}>
                   <Anchor target={"_blank"} href={"https://nft.griotenterprises.com"}>
-                    <Image alt={"logo"} src={"/config/images/Horsemen-Logo-256.png"} />
+                    <Image alt={"logo"} src={"config/images/Horsemen-Logo-256.png"} />
                   </Anchor>
                 </Col>
                 <Col size={{ xs: 4, lg: 4 }}></Col>
@@ -302,13 +302,13 @@ function App() {
                 <Col size={{ xs: 1, lg: 3 }}></Col>
                 <Col size={{ xs: 3, lg: 3 }} style={HRSM_IMG_Center}>
 
-                  <Image alt={"logo"} src={"/config/images/polygon-logo-inverted.png"} />
+                  <Image alt={"logo"} src={"config/images/polygon-logo-inverted.png"} />
 
                 </Col>
                 <Col size={{ xs: 3, lg: 3 }} style={HRSM_IMG_Center}>
 
                   <Anchor target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-                    <Image alt={"logo"} src={"/config/images/opensea-logo.png"} />
+                    <Image alt={"logo"} src={"config/images/opensea-logo.png"} />
                   </Anchor>
 
                 </Col>
@@ -334,7 +334,7 @@ function App() {
             size={{ xs: 12, lg: 6 }}
             minH="40rem"
             bg="gray700"
-            bgImg="/config/images/covers/bkg-halftone-dark2.jpg"
+            bgImg="config/images/covers/bkg-halftone-dark2.jpg"
             bgSize="cover"
           >
             <Div style={HRSM_Center}>
@@ -342,7 +342,7 @@ function App() {
               <Row>
                 <Col size={{ xs: 1, lg: 3 }}></Col>
                 <Col size={{ xs: 10, lg: 6 }}>
-                  <Image alt={"example"} src={"/config/images/proofs/preview.gif"} />
+                  <Image alt={"example"} src={"config/images/proofs/preview.gif"} />
                 </Col>
                 <Col size={{ xs: 1, lg: 3 }}></Col>
               </Row>
