@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "homepage": "https://mint.griotenterprises.com/oya",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build" 
   },
   "browserslist": {
     "production": [
