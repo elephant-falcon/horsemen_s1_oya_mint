@@ -57,9 +57,18 @@ export const connect = () => {
         const accounts = await ethereum.request({
           method: "eth_requestAccounts",
         });
-        const networkId = await ethereum.request({
+        let networkId = await ethereum.request({
           method: "net_version",
         });
+        if (networkId != CONFIG.NETWORK.ID) {
+          await ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: CONFIG.NETWORK.CHAINID }],
+          });
+          networkId = await ethereum.request({
+            method: "net_version",
+          });
+        }
         if (networkId === CONFIG.NETWORK.ID) {
           const SmartContractObj = new Web3EthContract(
             abi,
